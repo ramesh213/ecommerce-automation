@@ -12,13 +12,13 @@ import java.util.concurrent.TimeoutException;
 import static org.testng.Assert.*;
 
 public class UserTest extends BaseSetup {
-    String name = "Tony zaa";
-    String email = "tonyza@gmail.com";
-    String password = "tonyza54321*#";
+    String name = "Niyosaren Pd";
+    String email = "niyosarenPd@gmail.com";
+    String password = "niyoPd54321*#";
     boolean isNewUser = true;
 
     @Test
-    public void signUp() {
+    public void signUp() throws TimeoutException {
         HomePage home = new HomePage(driver);
         SignupLoginPage loginPage = new SignupLoginPage(driver);
   
@@ -31,17 +31,21 @@ public class UserTest extends BaseSetup {
             loginPage.login(email, password);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Logout")));
             assertEquals(driver.findElement(By.linkText("Logout")).getText(), "Logout");
+        } else {
+        	isNewUser = true;
+        	System.err.println("New User detected proceeding to fill user infomation");
         }
     }
 
-    @Test(dependsOnMethods = "signUp")
-    public void fillUserInfo() throws TimeoutException {
-        SignupLoginPage loginPage = new SignupLoginPage(driver);
+	@Test(dependsOnMethods = "signUp")
+	public void fillUserInfo() throws TimeoutException {
+		SignupLoginPage loginPage = new SignupLoginPage(driver);
 
-        if (!isNewUser) {
-            System.out.println("Skipping fillUserInfo — user already exists.");
-            return;
-        }
+		if (!isNewUser) {
+			System.out.println("Skipping fillUserInfo — user already exists.");
+			return;
+
+		}
 
         new WebDriverWait(driver, Duration.ofSeconds(5))
 		    .until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
@@ -69,7 +73,6 @@ public class UserTest extends BaseSetup {
 		    .elementToBeClickable(By.xpath("//a[@data-qa='continue-button']")));
 		continueBtn.click();
 
-		loginPage.login(email, password);
     }
 
 

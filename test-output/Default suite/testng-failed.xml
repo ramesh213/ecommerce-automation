@@ -5,8 +5,13 @@
     <classes>
       <class name="com.broadway.ecom.UserTest">
         <methods>
-          <include name="setUp"/>
+          <include name="logout"/>
+          <include name="setUpSuite"/>
+          <include name="makePayment"/>
+          <include name="buyProducts"/>
+          <include name="fillCardInfo"/>
           <include name="fillUserInfo"/>
+          <include name="signUp"/>
         </methods>
       </class> <!-- com.broadway.ecom.UserTest -->
     </classes>
