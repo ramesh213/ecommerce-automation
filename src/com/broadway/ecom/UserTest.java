@@ -33,7 +33,7 @@ public class UserTest extends BaseSetup {
             assertEquals(driver.findElement(By.linkText("Logout")).getText(), "Logout");
         } else {
         	isNewUser = true;
-        	System.err.println("New User detected proceeding to fill user infomation");
+        	System.out.println("New User detected proceeding to fill user infomation");
         }
     }
 
