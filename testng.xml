@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ecommerce Automation Suite">
+  <test name="Ecommerce Test Set">
+    <classes>
+      <class name="com.broadway.ecom.UserTest"/>
+      <!-- Add other test classes here if needed -->
+      <!-- <class name="com.broadway.ecom.ProductTest"/> -->
+    </classes>
+  </test>
+</suite>

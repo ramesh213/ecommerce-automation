@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Ecommerce Automation Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Ecommerce Test Set(failed)">
+    <classes>
+      <class name="com.broadway.ecom.UserTest">
+        <methods>
+          <include name="logout"/>
+          <include name="setUpSuite"/>
+          <include name="buyProducts"/>
+          <include name="makePayment"/>
+          <include name="tearDownSuite"/>
+          <include name="fillCardInfo"/>
+          <include name="fillUserInfo"/>
+          <include name="signUp"/>
+        </methods>
+      </class> <!-- com.broadway.ecom.UserTest -->
+    </classes>
+  </test> <!-- Ecommerce Test Set(failed) -->
+</suite> <!-- Failed suite [Ecommerce Automation Suite] -->
