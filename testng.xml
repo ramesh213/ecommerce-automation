@@ -4,6 +4,7 @@
   <test name="Ecommerce Test Set">
     <classes>
       <class name="com.broadway.ecom.UserTest"/>
+      <class name="com.broadway.ecom.NegativeLoginTest"/>
       <!-- Add other test classes here if needed -->
       <!-- <class name="com.broadway.ecom.ProductTest"/> -->
     </classes>

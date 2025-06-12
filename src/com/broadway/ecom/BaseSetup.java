@@ -10,19 +10,24 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseSetup {
 
-    protected static WebDriver driver; // static to be shared across the suite
-    protected String url = "https://automationexercise.com/";
+	String name = "Niyosaren Pd";
+	String email = "niyosarenPd@gmail.com";
+	String password = "niyoPd54321*#";
+	boolean isNewUser = true;
 
-    @BeforeSuite
-    public void setUpSuite() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().window().maximize();
-        driver.get(url);
-        System.out.println("Browser launched and navigated to: " + url);
+	protected static WebDriver driver; // static to be shared across the suite
+	protected String url = "https://automationexercise.com/";
 
-    }
+	@BeforeSuite
+	public void setUpSuite() {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		driver.get(url);
+		System.out.println("Browser launched and navigated to: " + url);
+
+	}
 
 //    @AfterSuite
 //    public void tearDownSuite() {

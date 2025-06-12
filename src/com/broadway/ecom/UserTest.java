@@ -12,10 +12,6 @@ import java.util.concurrent.TimeoutException;
 import static org.testng.Assert.*;
 
 public class UserTest extends BaseSetup {
-    String name = "Niyosaren Pd";
-    String email = "niyosarenPd@gmail.com";
-    String password = "niyoPd54321*#";
-    boolean isNewUser = true;
 
     @Test
     public void signUp() throws TimeoutException {

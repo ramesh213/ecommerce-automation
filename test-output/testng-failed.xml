@@ -3,17 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.broadway.ecom.UserTest">
+      <class name="com.broadway.ecom.NegativeLoginTest">
         <methods>
-          <include name="logout"/>
           <include name="setUpSuite"/>
-          <include name="makePayment"/>
-          <include name="buyProducts"/>
-          <include name="fillCardInfo"/>
-          <include name="fillUserInfo"/>
-          <include name="signUp"/>
+          <include name="testLoginWithInvalidEmail"/>
         </methods>
-      </class> <!-- com.broadway.ecom.UserTest -->
+      </class> <!-- com.broadway.ecom.NegativeLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

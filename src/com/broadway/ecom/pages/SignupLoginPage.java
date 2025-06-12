@@ -29,6 +29,10 @@ public class SignupLoginPage {
         driver.findElement(loginPassword).sendKeys(password);
         driver.findElement(loginButton).click();
     }
+    
+    public String getErrorMessage() {
+    	return driver.findElement(errorMsg).getText();
+    }
 
     public boolean isErrorMessageVisible() {
         return driver.findElements(errorMsg).size() > 0;
