@@ -29,15 +29,13 @@ public class BaseSetup {
 
 	}
 
-//    @AfterSuite
-//    public void tearDownSuite() {
-//        if (driver != null) {
-//            driver.quit();
-//            System.out.println("Browser closed after suite.");
-//        }
-//    }
-//
-//    public WebDriver getDriver() {
-//        return driver;
-//    }
+    @AfterSuite
+    public void tearDownSuite() {
+        if (driver != null) {
+            driver.quit();
+            System.out.println("Browser closed after suite.");
+        }
+    }
+
+
 }
